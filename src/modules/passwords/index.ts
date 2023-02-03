@@ -1,4 +1,4 @@
-export { masterPrefix } from './hooks/master'
+export { masterPrefix } from './hooks/master.hook'
 
 export { default as MasterEnter } from './components/MasterEnter.vue'
-export { default as PasswordMain } from './components/PasswordMain.vue'
+export { default as PasswordsMain } from './components/PasswordsMain.vue'
