@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useMasterEnter } from '../hooks/master'
+import { useMasterEnter } from '../hooks/master.hook'
 
 const { masterPassword, hashIsBeingCalculated, onSubmit } = useMasterEnter()
 </script>
@@ -10,6 +10,10 @@ const { masterPassword, hashIsBeingCalculated, onSubmit } = useMasterEnter()
       <input type="password" v-model="masterPassword" />
     </div>
 
-    <input type="submit" value="Enter" :disabled="hashIsBeingCalculated" />
+    <input
+      type="submit"
+      value="Enter"
+      :disabled="hashIsBeingCalculated || !masterPassword"
+    />
   </form>
 </template>
