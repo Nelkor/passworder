@@ -15,7 +15,7 @@ const lcLetters = createLettersRow(26, 97)
 const createGetter =
   (arr: string[]) =>
   (index: number): string =>
-    arr.at(index % arr.length) as string
+    arr[index % arr.length] as string
 
 export const getSymbolAt = createGetter([
   ...specialSymbols,
